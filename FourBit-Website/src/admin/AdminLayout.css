@@ -1,0 +1,14 @@
+.admin-layout{
+    display: flex;
+    max-width: 1024px;   
+    width: 1024px;
+    min-height: 100vh;
+    gap: 2rem;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+}
+.head-and-body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

@@ -1,0 +1,65 @@
+import React, { useState , useEffect } from 'react'
+// import ProjectData from './ProjectsData'
+import toast from "react-hot-toast"
+import api from "../../../lib/axios.js"
+
+import "./ProjectsCard.css"
+
+const ProjectsCard = () => {
+
+    const [projects, setProjects] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(  ()=>{
+        const fetchProjects = async () =>{
+            try {
+                const response = await api.get("/admin/projects")
+                setProjects(response.data)
+                setLoading(false)
+            } catch (error) {
+                console.log(error);
+                toast.error("Error fetching projects")
+            }
+        }
+        fetchProjects()
+    },[])
+    console.log(projects);
+    
+    
+  return (
+    <div>
+      <h3>All Projects</h3>
+      <p>A list of projects and their status.</p>
+
+      <table>
+        <tr>
+        <th>Project Name</th>
+        <th>Client</th>
+        <th>Status</th>
+        <th>Progress</th>
+        <th>Team</th>
+        <th>Due Date</th>
+        {/* <th>Actions</th> */}
+        </tr>
+        {
+            projects && projects.length && (
+                projects.map((project)=>
+                <div key={project.id}>
+                <tr>
+                    <td>{project.Project_Name}</td>
+                    <td>{project.client}</td>
+                    <td>{project.status}</td>
+                    <td>{project.progress}</td>
+                    <td>{project.team}</td>
+                    <td>{project.due_date}</td>
+                </tr>
+                </div>)
+            )
+        }
+        
+      </table>
+    </div>
+  )
+}
+
+export default ProjectsCard

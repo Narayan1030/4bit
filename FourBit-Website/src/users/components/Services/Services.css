@@ -1,0 +1,219 @@
+.service-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  font-family: "Inter", sans-serif;
+  background: var(--bg-color);
+}
+.service-container-description {
+  display: flex;
+  flex-direction: column;
+}
+.service-container button {
+  padding: 0.6rem 1.2rem;
+  /* margin-right: 0; */
+  border-radius: 8px;
+  border: none;
+  background: var(--button-bg);
+  color: var(--button-text);
+  font-weight: 200;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.service-container button:hover {
+  background: #7a6cff;
+}
+
+.service-container h1 {
+  font-size: 1.5rem;
+  margin: 0.1rem;
+  /* padding: 5px; */
+}
+.service-descriptions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--special-text);
+}
+/* .service-card-container{
+    display: flex;
+} */
+.card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 0.7rem;
+  height: auto;
+  /* padding: 10px; */
+  /* margin:px; */
+}
+
+/* .service-card-container{
+    display: flex;
+    /* grid-template-columns: repeat(4, 1fr); 
+    gap: 5px;
+} */
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--card-bg);
+  /* width: 250px;
+    height: 230px; */
+  border: 1px solid rgba(194, 181, 181, 0.395);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.service-card-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.service-icons {
+  background-color: var(--icon-bg);
+  padding: 3px 5px;
+  padding-bottom: 0px;
+  border-radius: 5px;
+  margin: 0;
+  /* padding: 0; */
+}
+.service-expertise {
+  font-size: 0.43rem;
+  background-color: rgb(139, 57, 207);
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  /* padding-top: 2px; */
+  /* width: auto; */
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.service-details {
+  margin: 0;
+  padding-bottom: 0;
+}
+.service-detail-title {
+  font-size: 1rem;
+  margin: 1rem 0;
+  /* padding: 0; */
+}
+.service-detail-para {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  color: var(--special-text);
+}
+
+.service-tools > button {
+  margin: 5px;
+  font-size: 0.6rem;
+  font-weight: 400;
+  padding: 2px 5px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid rgba(128, 128, 128, 0.379);
+  border-radius: 12px;
+}
+.service-tools > button:hover {
+  background-color: rgba(135, 116, 116, 0.537);
+}
+
+
+/* media queries */
+@media(max-width: 768px){
+  .service-container {
+    max-width: 95%;
+    width: 100%;
+    /* display: flex;
+    justify-content: start; */
+    /* margin-left: 1rem; */
+    /* flex-direction: column; */
+  }
+    .card {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+  }
+  .service-expertise{
+    padding: 2px 5px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .service-container {
+    max-width: 95%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    /* margin-left: 1rem; */
+    /* flex-direction: column; */
+  }
+  .service-container-description h1 {
+    font-size: 1.5rem;
+  }
+  .service-descriptions {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    /* max-width: 90%; */
+    gap: 10px;
+    /* border: 1px solid black; */
+    /* width: 450px; */
+    justify-content: space-between ;
+    align-items: center;
+    overflow-x: unset;
+    /* flex-direction: column; */
+    
+  }  
+  .service-container-description p {
+    /* border: 1px solid red; */
+    /* margin-right: 0; */
+    font-size: 0.7rem;
+    flex: 1 1 0;
+    width: 100%;
+    word-break: break-word;
+    white-space: normal;
+    /* flex: 3; */
+    /* flex-wrap: wrap; */
+  }
+
+  .service-descriptions button {
+    font-size: 0.5rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: 5px;
+    font-weight: 400;
+    flex: 0 0 auto;
+    /* margin: 0; */
+    /* width: 9rem; */
+  }
+  .service-expertise{
+    font-size: 0.7rem;
+  }
+  .service-detail-title{
+    font-size: 1.2rem;
+  }
+  .service-detail-para{
+    font-size: 0.7rem;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+
+
+
+

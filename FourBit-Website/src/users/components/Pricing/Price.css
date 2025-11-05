@@ -1,0 +1,117 @@
+
+.pricing-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  /* padding: 60px 10%; */
+  margin-top: 50px;
+  width: 100%;
+}
+.pricing-description {
+  display: flex;
+  flex-direction: column;
+}
+.pricing-description h2 {
+  margin: 0;
+}
+.pricing-description p {
+  color: var(--special-text);
+}
+.pricing-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+.price-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+.price-card {
+  border: 0.2px solid #bdb2b243;
+  border-radius: 15px;
+  background-color: var(--card-bg);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.pricing h4 {
+  margin: 0;
+}
+.pricing p {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.pricing-head {
+  display: flex;
+  justify-content: space-between;
+}
+.pricing-head h4 {
+  font-weight: 700;
+}
+.price-detail {
+  display: flex;
+}
+.price-detail p {
+  color: var(--text-color);
+  font-size: 15px;
+}
+.pricing-head p {
+  background-color: var(--icon-bg);
+  border-radius: 15px;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.price-feature {
+  display: flex;
+  flex-direction: column;
+}
+.price-feature span {
+  padding: 2px;
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 500;
+}
+.price-card button {
+  padding: 0.6rem 1.2rem;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  background: var(--button-bg); /* Indigo/blue */
+  color: var(--button-text);
+  font-weight: 200;
+  width: 100%;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+  
+.price-card button:hover{
+  background: #7a6cff;
+}
+
+@media(max-width:768px){
+  .pricing-container{
+    max-width: 95%;
+    width: 100%;
+  }
+  .pricing-head p{
+    font-size: 8px;
+  }
+}
+
+@media(max-width: 480px){
+  .pricing-container{
+    max-width: 95%;
+    width: 100%;
+  }
+  .pricing-card{
+    grid-template-columns: 1fr;
+  }
+  .price-card button{
+    /* font-size: 0.5rem; */
+    font-weight: 500;
+  }
+}
