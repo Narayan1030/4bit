@@ -1,0 +1,61 @@
+.modal{
+    inset: 0;
+    position: fixed;
+    /* background-opacity: 30px; */
+    background-color: rgba(0, 0, 0, 0.5);    
+    backdrop-filter: blur(5px) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.modal-container{
+    border: 1px solid gray; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: fit-content;
+    height: auto;
+    position: relative;
+    padding: 2rem;
+    border-radius: 7px;
+}
+.close-btn{
+    position:absolute;
+    top: 0;
+    right: 0;
+}
+
+.edit-project-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem; 
+  max-width: 600px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  grid-column: span 2; 
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+input, select, textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.action-btn{
+    background-color: var(--button-bg);
+    border-radius: 8px;
+    padding: 8px 10px;
+    color: var(--text-color);
+}

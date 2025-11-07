@@ -1,7 +1,15 @@
+.projects-card{
+    border: 1px solid gray;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding-left: 1rem;
+}
+
 table,tr,td,th{
-    border: 1px solid white;
+    /* border: 1px solid white; */
     border-collapse: collapse;
+    
 }
 td,th{
-    padding: 5px;
+    padding: 8px;
 }

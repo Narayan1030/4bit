@@ -2,6 +2,7 @@ import React, { useState , useEffect } from 'react'
 // import ProjectData from './ProjectsData'
 import toast from "react-hot-toast"
 import api from "../../../lib/axios.js"
+import { HiDotsHorizontal } from "react-icons/hi";
 
 import "./ProjectsCard.css"
 
@@ -27,36 +28,40 @@ const ProjectsCard = () => {
     
     
   return (
-    <div>
+    <div className='projects-card'>
       <h3>All Projects</h3>
       <p>A list of projects and their status.</p>
 
       <table>
-        <tr>
+       <thead>
+         <tr>
         <th>Project Name</th>
         <th>Client</th>
         <th>Status</th>
         <th>Progress</th>
         <th>Team</th>
         <th>Due Date</th>
-        {/* <th>Actions</th> */}
+        <th>Action</th>
         </tr>
-        {
+       </thead>
+        <tbody>
+          {
             projects && projects.length && (
                 projects.map((project)=>
-                <div key={project.id}>
-                <tr>
+                
+                <tr key={project.id}>
                     <td>{project.Project_Name}</td>
                     <td>{project.client}</td>
                     <td>{project.status}</td>
                     <td>{project.progress}</td>
                     <td>{project.team}</td>
-                    <td>{project.due_date}</td>
+                    <td>{new Date(project.due_date).toLocaleDateString()}</td>
+                    <td><HiDotsHorizontal/></td>
                 </tr>
-                </div>)
+                )
             )
         }
-        
+        </tbody>
       </table>
     </div>
   )
