@@ -1,33 +1,61 @@
-.projects-card{
-    border: 1px solid gray;
-    margin-top: 1rem;
-    border-radius: 10px;
-    padding-left: 1rem;
-    height: 450px;
-    overflow-y: scroll;
-    
-    max-width: 1024px;
-    /* width: 100%; */
+.projects-card {
+  border: 1px solid gray;
+  margin-top: 1rem;
+  border-radius: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 450px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  max-width: 1024px;
+  width: 100%;
+}
+.projects-card::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
-table,tr,td,th{
-    /* border: 1px solid white; */
-    border-collapse: collapse;
-    
-}
-table{
-    border: 1px solid red;
-}
-td,th{
-    padding: 8px 5px;
+.projects-card h3 {
+  font-weight: 600;
+  line-height: 5px;
+  font-size: 1.4rem;
 }
 
-.table-action{
-    background-color: transparent;
-    border: none;
-    color: var(--text-color);
 
-    &:hover{
-     cursor: pointer;   
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto; /* ensures all columns stretch equally */
+}
+
+th, td {
+  padding: 10px 8px;
+  border-bottom: 1px solid white;
+  text-align: left;
+  word-wrap: break-word; /* prevent overflow */
+}
+
+th {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: var(--icon-bg); 
+}
+
+.table-container {
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.table-action {
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+}
+
+.table-action:hover {
+  cursor: pointer;
 }

@@ -1,15 +1,19 @@
 import "./Navbar.css";
 import { useState, useEffect, useRef } from "react";
+// import { ThemeContext } from "../../../App.jsx";
 import whitelogo from "../../../assets/4bitlogowhite.png";
 import blacklogo from "../../../assets/4bitlogoblack.png";
 import { RiAdminFill } from "react-icons/ri";
 import { Link } from "react-router";
 
+
 import { GiHamburgerMenu } from "react-icons/gi";
 
-export default function Navbar({ light, setLight }) {
+export default function Navbar({light, setLight}) {
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef();
+
+  // const [light, setLight] = useContext(ThemeContext)
 
   function toggleTheme() {
     setLight(!light);

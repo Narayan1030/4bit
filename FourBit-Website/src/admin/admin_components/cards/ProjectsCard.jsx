@@ -51,7 +51,8 @@ const ProjectsCard = () => {
       <h3>All Projects</h3>
       <p>A list of projects and their status.</p>
 
-      <table>
+      <div className="table-container">
+        <table>
         <thead>
           <tr>
             <th>Project Name</th>
@@ -87,6 +88,7 @@ const ProjectsCard = () => {
             : null}
         </tbody>
       </table>
+      </div>
       {editModal && (
         <ProjectModal
           mode="edit"

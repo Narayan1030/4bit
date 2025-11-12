@@ -8,6 +8,8 @@ import "./AdminLayout.css";
 const AdminLayout = () => {
 
   const [isNavVisible, setIsNavVisible] = useState(true)
+  
+
   const handleHideNav = () =>{
     setIsNavVisible(!isNavVisible)
   }
@@ -17,7 +19,7 @@ const AdminLayout = () => {
   return (
     
       <div className="admin-layout">
-      <AdminNavBar isNavVisible={isNavVisible}/>
+      <AdminNavBar isNavVisible={isNavVisible} />
       <div className="head-and-body">
         <AdminHeader handleHideNav={handleHideNav}/>
         <main>

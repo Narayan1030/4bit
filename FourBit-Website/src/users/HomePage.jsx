@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState,useEffect } from 'react'
+import { useContext,useEffect } from 'react'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Services from './components/Services/Services'
 import Hero from './components/Hero/Hero'
@@ -9,10 +9,11 @@ import Work from './components/Work/Work.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import Review from './components/Review/Review.jsx'
 import Footer from './components/Footer/Footer.jsx'
-
+import { ThemeContext } from '../App.jsx'
 
 const HomePage = () => {
-    const [light, setLight] = useState(false);
+    
+  const [light, setLight] = useContext(ThemeContext)
 
   useEffect(() => {
     if (light) {
@@ -24,7 +25,7 @@ const HomePage = () => {
   
   return (
     <div className='container'>
-      <Navbar light={light} setLight={setLight}/>
+              <Navbar light={light} setLight={setLight}/>
               <div id="hero"><Hero /></div>
               <div id="services"><Services /></div>
               <div id="work"><Work /></div>
