@@ -1,0 +1,43 @@
+# ===== Node.js Backend =====
+Backend/node_modules/
+Backend/.env
+Backend/.env.local
+Backend/.env.*.local
+Backend/logs/
+Backend/*.log
+Backend/npm-debug.log*
+Backend/yarn-debug.log*
+Backend/yarn-error.log*
+
+# ===== Frontend (React + Vite) =====
+FourBit-Website/node_modules/
+FourBit-Website/.env
+FourBit-Website/.env.local
+FourBit-Website/.env.*.local
+FourBit-Website/dist/
+FourBit-Website/.cache/
+FourBit-Website/.vite/
+
+# ===== Root node_modules (if exists) =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===== System / Editor files =====
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ===== Test / Coverage =====
+coverage/
+*.pid
+*.seed
+*.tgz
+
+# ===== Miscellaneous =====
+.env
+.env.local
+.env.*.local
