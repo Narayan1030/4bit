@@ -1,5 +1,5 @@
 import "./Work.css";
-import { useState } from "react";
+import { useState, useEffect } from "react"
 import WorkElements from "./WorkData.js";
 import WorkCard from "./WorkCard.jsx";
 
@@ -8,6 +8,8 @@ export default function Work() {
   const [isViewAll, setIsViewAll] = useState(false)
 
   const visibileWork = isViewAll ? WorkElements : WorkElements.slice(0,3)
+
+  
   return (
     <div className="featured-work-container">
       <div className="featured-work-description">

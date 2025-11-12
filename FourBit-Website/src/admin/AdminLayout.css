@@ -6,6 +6,10 @@
     gap: 2rem;
     /* border: 1px solid red; */
     margin: 0 auto;
+    position: relative;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 0 auto;
 }
 .head-and-body{
     display: flex;

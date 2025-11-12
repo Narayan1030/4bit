@@ -15,7 +15,7 @@ const projectsSchema = new mongoose.Schema({
     },
     status:{
         type: String,
-        enum: ["complete","incomplete","canceled"],
+        enum: ["Complete","In Progress","Pending"],
         required: true
     },
     progress:{
@@ -30,6 +30,14 @@ const projectsSchema = new mongoose.Schema({
         // required: true
     },
     result:{
+        type: String,
+        required: false
+    },
+    image:{
+        type:String,
+        required: false
+    },
+    description:{
         type: String,
         required: true
     }

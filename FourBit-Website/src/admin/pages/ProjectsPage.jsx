@@ -8,10 +8,6 @@ import ProjectModal from "../admin_components/modals/ProjectModal";
 const ProjectsPage = () => {
   const [showModal, setShowModal] = useState(false);
 
-  const handleShowModal = () => {
-    setShowModal(!showModal);
-  };
-
   return (
     <>
       <div className="projects-page-container">
@@ -20,7 +16,7 @@ const ProjectsPage = () => {
             <h2>Projects</h2>
             <p>Manage and track your projects.</p>
           </div>
-          <button className="prj-btn" onClick={() => handleShowModal()}>
+          <button className="prj-btn" onClick={() => setShowModal(true)}>
             <BsPlus /> New Project
           </button>
         </div>
@@ -33,10 +29,13 @@ const ProjectsPage = () => {
         />
       </div>
 
-      <ProjectsCard />
-      {showModal && (
-        <ProjectModal isOpen={showModal} isClose={handleShowModal} />
-      )}
+      <ProjectsCard/>
+      {
+      showModal ? 
+        <ProjectModal mode ="add"  onClose={() => setShowModal(false)} />
+        :null
+      }
+      
     </>
   );
 };

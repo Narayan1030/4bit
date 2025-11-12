@@ -11,7 +11,7 @@ const AdminLayout = () => {
   const handleHideNav = () =>{
     setIsNavVisible(!isNavVisible)
   }
-  console.log(isNavVisible);
+  // console.log(isNavVisible);
   
 
   return (

@@ -5,7 +5,10 @@
     height: 100vh;
     border-right: 0.5px solid gray;
     color: var(--text-color);
-    position: relative;
+    position: sticky;
+    left: 0;
+    top: 0;
+    
 }
 .navBar-hidden{
     display: none;

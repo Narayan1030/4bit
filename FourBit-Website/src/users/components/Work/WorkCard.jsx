@@ -1,7 +1,7 @@
 import "./Work.css"
 
 export default function WorkCard({element}){
-    // console.log(element);
+
     
     return(
         <>
