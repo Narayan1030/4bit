@@ -47,7 +47,7 @@ const Footer = ({light}) => {
                         <h3>Contact</h3>
 
                         <a href="mailto:hello@fourbit.com"><p><FiMail /> hello@fourbit.com <br /></p></a>
-                        <p><FiPhone /> +977-98X-XXX-XXXX</p>
+                        <p><FiPhone /> +977-970-5395408</p>
                     </div>
                     </div>
 

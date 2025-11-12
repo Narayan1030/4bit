@@ -11,7 +11,7 @@ const Contact = () => {
                 <div className="contact-info">
                     <h2>Contact details</h2>
                     <p className='special'>Prefer a direct line? Reach us anytime.</p><hr />
-                    <a href="#"><FiPhone />+977-98-XXX-XXX</a>
+                    <a href="#"><FiPhone />+977-970-5395408</a>
                     <a href="mailto:hello@fourbit.com"><FiMail />hello@fourbit.com</a>
                     <a href="https://www.linkedin.com/company/thefourbit" target="blank"><FiLinkedin />linked.com/company/Fourbit</a>
                     <a href="https://www.facebook.com/thefourbit" target="blank"><FiFacebook />facebook.com/Fourbit</a>
